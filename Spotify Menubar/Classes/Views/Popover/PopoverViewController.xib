@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="14109" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="14109"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <customObject id="-2" userLabel="File's Owner" customClass="PopoverViewController" customModule="Spotify_Menubar" customModuleProvider="target">
+            <connections>
+                <outlet property="backgroundView" destination="JQa-G5-4JC" id="O4h-CQ-oI0"/>
+                <outlet property="btnPlayPause" destination="ZYK-4q-2Ek" id="saT-pC-he8"/>
+                <outlet property="imageViewArtwork" destination="yjq-3z-9rV" id="Pqe-Qh-csH"/>
+                <outlet property="labelArtist" destination="6mq-CZ-Pdb" id="WLt-Yh-rjG"/>
+                <outlet property="labelSong" destination="OKc-i6-TSR" id="sxQ-Jd-AMg"/>
+                <outlet property="view" destination="Hz6-mo-xeY" id="0bl-1N-x8E"/>
+            </connections>
+        </customObject>
+        <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
+        <customObject id="-3" userLabel="Application" customClass="NSObject"/>
+        <customView misplaced="YES" id="Hz6-mo-xeY">
+            <rect key="frame" x="0.0" y="0.0" width="360" height="70"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+            <subviews>
+                <customView translatesAutoresizingMaskIntoConstraints="NO" id="JQa-G5-4JC">
+                    <rect key="frame" x="0.0" y="0.0" width="360" height="70"/>
+                    <subviews>
+                        <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="yjq-3z-9rV">
+                            <rect key="frame" x="0.0" y="0.0" width="70" height="70"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="70" id="F4g-bg-H0y"/>
+                                <constraint firstAttribute="width" secondItem="yjq-3z-9rV" secondAttribute="height" multiplier="1:1" id="z97-nC-jpB"/>
+                            </constraints>
+                            <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" id="Dqa-dV-aql"/>
+                        </imageView>
+                        <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="OKc-i6-TSR">
+                            <rect key="frame" x="80" y="35" width="204" height="24"/>
+                            <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="left" title="Song" id="2sL-qh-iek">
+                                <font key="font" size="14" name="Avenir-Medium"/>
+                                <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                            </textFieldCell>
+                        </textField>
+                        <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="6mq-CZ-Pdb">
+                            <rect key="frame" x="80" y="15" width="34" height="20"/>
+                            <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="left" title="Artist" id="iGh-NV-u7r">
+                                <font key="font" size="12" name="Avenir-Medium"/>
+                                <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                            </textFieldCell>
+                        </textField>
+                        <customView translatesAutoresizingMaskIntoConstraints="NO" id="ZYK-4q-2Ek" customClass="PlayPauseButtonView" customModule="Spotify_Menubar" customModuleProvider="target">
+                            <rect key="frame" x="294" y="5" width="60" height="60"/>
+                            <constraints>
+                                <constraint firstAttribute="width" secondItem="ZYK-4q-2Ek" secondAttribute="height" multiplier="1:1" id="7TK-ZU-otz"/>
+                                <constraint firstAttribute="width" constant="60" id="XCN-Wq-eVo"/>
+                            </constraints>
+                        </customView>
+                    </subviews>
+                    <constraints>
+                        <constraint firstItem="yjq-3z-9rV" firstAttribute="top" secondItem="JQa-G5-4JC" secondAttribute="top" id="6Xi-rd-grQ"/>
+                        <constraint firstAttribute="trailing" secondItem="ZYK-4q-2Ek" secondAttribute="trailing" constant="6" id="6uB-fh-2xK"/>
+                        <constraint firstItem="OKc-i6-TSR" firstAttribute="leading" secondItem="yjq-3z-9rV" secondAttribute="trailing" constant="12" id="8yG-Kc-Sw1"/>
+                        <constraint firstAttribute="bottom" secondItem="yjq-3z-9rV" secondAttribute="bottom" id="BHg-cx-eFO"/>
+                        <constraint firstItem="6mq-CZ-Pdb" firstAttribute="top" secondItem="OKc-i6-TSR" secondAttribute="bottom" id="NrS-SS-Klf"/>
+                        <constraint firstItem="ZYK-4q-2Ek" firstAttribute="centerY" secondItem="JQa-G5-4JC" secondAttribute="centerY" id="SwM-sT-FD0"/>
+                        <constraint firstAttribute="bottom" secondItem="OKc-i6-TSR" secondAttribute="bottom" constant="35" id="Wkm-1v-zNI"/>
+                        <constraint firstAttribute="width" constant="360" id="Y6f-a6-wVr"/>
+                        <constraint firstItem="ZYK-4q-2Ek" firstAttribute="leading" secondItem="OKc-i6-TSR" secondAttribute="trailing" constant="12" id="fVU-ZK-Fkq"/>
+                        <constraint firstItem="6mq-CZ-Pdb" firstAttribute="leading" secondItem="yjq-3z-9rV" secondAttribute="trailing" constant="12" id="jWB-mT-EzZ"/>
+                        <constraint firstItem="yjq-3z-9rV" firstAttribute="leading" secondItem="JQa-G5-4JC" secondAttribute="leading" id="pMO-Ca-xWr"/>
+                    </constraints>
+                </customView>
+            </subviews>
+            <constraints>
+                <constraint firstItem="JQa-G5-4JC" firstAttribute="top" secondItem="Hz6-mo-xeY" secondAttribute="top" id="Kbg-40-uDB"/>
+                <constraint firstAttribute="bottom" secondItem="JQa-G5-4JC" secondAttribute="bottom" id="QL6-2m-AcG"/>
+                <constraint firstItem="JQa-G5-4JC" firstAttribute="leading" secondItem="Hz6-mo-xeY" secondAttribute="leading" id="ikn-Y0-r4r"/>
+                <constraint firstAttribute="trailing" secondItem="JQa-G5-4JC" secondAttribute="trailing" id="xJ2-VY-o5m"/>
+            </constraints>
+            <point key="canvasLocation" x="78" y="125"/>
+        </customView>
+    </objects>
+</document>

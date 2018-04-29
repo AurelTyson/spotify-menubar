@@ -1,0 +1,62 @@
+PODS:
+  - Alamofire (4.7.2)
+  - AlamofireImage (3.3.1):
+    - Alamofire (~> 4.5)
+  - FlatButton (1.4)
+  - OGCircularBar (1.2)
+  - RxAlamofire (4.2.0):
+    - RxAlamofire/Core (= 4.2.0)
+  - RxAlamofire/Core (4.2.0):
+    - Alamofire (~> 4.5)
+    - RxSwift (~> 4)
+  - RxCocoa (4.1.2):
+    - RxSwift (~> 4.0)
+  - RxSwift (4.1.2)
+  - SnapKit (4.0.0)
+
+DEPENDENCIES:
+  - Alamofire
+  - AlamofireImage
+  - FlatButton (from `https://github.com/OskarGroth/FlatButton.git`)
+  - OGCircularBar (from `https://github.com/OskarGroth/OGCircularBar.git`)
+  - RxAlamofire
+  - RxCocoa
+  - RxSwift
+  - SnapKit
+
+SPEC REPOS:
+  https://github.com/CocoaPods/Specs.git:
+    - Alamofire
+    - AlamofireImage
+    - RxAlamofire
+    - RxCocoa
+    - RxSwift
+    - SnapKit
+
+EXTERNAL SOURCES:
+  FlatButton:
+    :git: https://github.com/OskarGroth/FlatButton.git
+  OGCircularBar:
+    :git: https://github.com/OskarGroth/OGCircularBar.git
+
+CHECKOUT OPTIONS:
+  FlatButton:
+    :commit: d2adc605a469168df148d000c50d78ed8aae0bf3
+    :git: https://github.com/OskarGroth/FlatButton.git
+  OGCircularBar:
+    :commit: c7aa3ea80d1e4318466d2c08f7d8c90530578ea0
+    :git: https://github.com/OskarGroth/OGCircularBar.git
+
+SPEC CHECKSUMS:
+  Alamofire: e4fa87002c137ba2d8d634d2c51fabcda0d5c223
+  AlamofireImage: 3b35b586853abaf94ca1250f4e94cff3c21a4c0d
+  FlatButton: d894cd742a908be216ae1a3e90542fbe82ba3768
+  OGCircularBar: 6e7b17fadecfee6a3d8bd1a4e1919964a20555a2
+  RxAlamofire: 87a9c588541210cc3e4a1f843ccc3ecf3eb98b31
+  RxCocoa: d88ba0f1f6abf040011a9eb4b539324fc426843a
+  RxSwift: e49536837d9901277638493ea537394d4b55f570
+  SnapKit: a42d492c16e80209130a3379f73596c3454b7694
+
+PODFILE CHECKSUM: 6a7a262d6ce7bfaf01ff7bc51d61f2be165c2639
+
+COCOAPODS: 1.5.0
