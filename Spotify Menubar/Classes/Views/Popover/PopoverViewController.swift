@@ -37,6 +37,9 @@ public final class PopoverViewController: NSViewController {
     
     private var viewModel: PopoverViewModelType!
     
+    private var updateTrackDisposable: Disposable?
+    private var updateTrackImageDisposable: Disposable?
+    
     private let disposeBag = DisposeBag()
     
     // MARK: Init
@@ -79,8 +82,13 @@ public final class PopoverViewController: NSViewController {
             self?.viewModel.didFire(playerAction: .playPause)
         }
         
-        // Binding current track
-        self.viewModel.currentTrack.subscribe(onNext: { [weak self] (track: SpotifyTrack) in
+    }
+    
+    override public func viewWillAppear() {
+        super.viewWillAppear()
+        
+        // Start subscription
+        self.updateTrackDisposable = self.viewModel.currentTrack.subscribe(onNext: { [weak self] (track: SpotifyTrack) in
             
             // Song
             self?.labelSong.stringValue = track.name ?? "..."
@@ -96,15 +104,23 @@ public final class PopoverViewController: NSViewController {
             // Playing / pause
             self?.btnPlayPause.setPlaying(self?.viewModel.isPlayerPlaying ?? false)
             
-        }).disposed(by: self.disposeBag)
+        })
         
-        // Binding image
-        self.viewModel.currentTrackImage.subscribe(onNext: { [weak self] (image: NSImage?) in
+        self.updateTrackImageDisposable = self.viewModel.currentTrackImage.subscribe(onNext: { [weak self] (image: NSImage?) in
             
             // Set image
             self?.imageViewArtwork.image = image
             
-        }).disposed(by: self.disposeBag)
+        })
+        
+    }
+    
+    override public func viewWillDisappear() {
+        super.viewWillDisappear()
+        
+        // Cancel subscription
+        self.updateTrackDisposable?.dispose()
+        self.updateTrackImageDisposable?.dispose()
         
     }
     
