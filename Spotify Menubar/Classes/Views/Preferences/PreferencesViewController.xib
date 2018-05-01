@@ -7,6 +7,7 @@
     <objects>
         <customObject id="-2" userLabel="File's Owner" customClass="PreferencesViewController" customModule="Spotify_Menubar" customModuleProvider="target">
             <connections>
+                <outlet property="checkIsNotificationActivated" destination="6Y6-E0-d1n" id="TfY-Sf-D2N"/>
                 <outlet property="view" destination="Hz6-mo-xeY" id="0bl-1N-x8E"/>
             </connections>
         </customObject>
@@ -15,6 +16,20 @@
         <customView id="Hz6-mo-xeY">
             <rect key="frame" x="0.0" y="0.0" width="323" height="212"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+            <subviews>
+                <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="6Y6-E0-d1n">
+                    <rect key="frame" x="18" y="176" width="287" height="18"/>
+                    <buttonCell key="cell" type="check" title="Check" bezelStyle="regularSquare" imagePosition="left" state="on" inset="2" id="8ti-SQ-tdS">
+                        <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                        <font key="font" metaFont="system"/>
+                    </buttonCell>
+                </button>
+            </subviews>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="6Y6-E0-d1n" secondAttribute="trailing" constant="20" id="3sw-lH-eOi"/>
+                <constraint firstItem="6Y6-E0-d1n" firstAttribute="top" secondItem="Hz6-mo-xeY" secondAttribute="top" constant="20" id="TbM-5B-5PB"/>
+                <constraint firstItem="6Y6-E0-d1n" firstAttribute="leading" secondItem="Hz6-mo-xeY" secondAttribute="leading" constant="20" id="k9k-KA-7b1"/>
+            </constraints>
             <point key="canvasLocation" x="52.5" y="123"/>
         </customView>
     </objects>

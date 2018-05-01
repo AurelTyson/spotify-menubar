@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		74081AB92098CA46000688A3 /* PreferencesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74081AB82098CA46000688A3 /* PreferencesViewModel.swift */; };
+		74081ABC2098CB7C000688A3 /* ConfigurationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74081ABB2098CB7C000688A3 /* ConfigurationService.swift */; };
 		7420960E2093765B00E39F6E /* SpotifyApplication.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7420960D2093765B00E39F6E /* SpotifyApplication.swift */; };
 		742096102093768E00E39F6E /* SpotifyTrack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7420960F2093768E00E39F6E /* SpotifyTrack.swift */; };
 		742096122093780000E39F6E /* SpotifyController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 742096112093780000E39F6E /* SpotifyController.swift */; };
@@ -16,7 +18,6 @@
 		744F8B1920935BC8007AF645 /* ImageService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 744F8B1820935BC8007AF645 /* ImageService.swift */; };
 		744F8B1D20936094007AF645 /* MusicPlayerAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 744F8B1C20936094007AF645 /* MusicPlayerAction.swift */; };
 		74663D3C209337450006F53C /* PopoverViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74663D3B209337450006F53C /* PopoverViewModel.swift */; };
-		74663D41209341F30006F53C /* TrackInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74663D40209341F30006F53C /* TrackInfoView.swift */; };
 		7482E34120926640003D4C01 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7482E34020926640003D4C01 /* AppDelegate.swift */; };
 		7482E34320926641003D4C01 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7482E34220926641003D4C01 /* ViewController.swift */; };
 		7482E34520926642003D4C01 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7482E34420926642003D4C01 /* Assets.xcassets */; };
@@ -58,6 +59,8 @@
 		1EC9969C850303D801910A1E /* Pods-Spotify Menubar.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Spotify Menubar.release.xcconfig"; path = "Pods/Target Support Files/Pods-Spotify Menubar/Pods-Spotify Menubar.release.xcconfig"; sourceTree = "<group>"; };
 		3BBEE13FDDED90A3827192D9 /* Pods-Spotify MenubarTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Spotify MenubarTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Spotify MenubarTests/Pods-Spotify MenubarTests.release.xcconfig"; sourceTree = "<group>"; };
 		4205BC80C7B90843BEBE5AF9 /* Pods_Spotify_MenubarTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Spotify_MenubarTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		74081AB82098CA46000688A3 /* PreferencesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreferencesViewModel.swift; sourceTree = "<group>"; };
+		74081ABB2098CB7C000688A3 /* ConfigurationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfigurationService.swift; sourceTree = "<group>"; };
 		7420960D2093765B00E39F6E /* SpotifyApplication.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpotifyApplication.swift; sourceTree = "<group>"; };
 		7420960F2093768E00E39F6E /* SpotifyTrack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpotifyTrack.swift; sourceTree = "<group>"; };
 		742096112093780000E39F6E /* SpotifyController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpotifyController.swift; sourceTree = "<group>"; };
@@ -67,7 +70,6 @@
 		744F8B1820935BC8007AF645 /* ImageService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageService.swift; sourceTree = "<group>"; };
 		744F8B1C20936094007AF645 /* MusicPlayerAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicPlayerAction.swift; sourceTree = "<group>"; };
 		74663D3B209337450006F53C /* PopoverViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopoverViewModel.swift; sourceTree = "<group>"; };
-		74663D40209341F30006F53C /* TrackInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackInfoView.swift; sourceTree = "<group>"; };
 		7482E33D20926640003D4C01 /* Spotify Menubar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Spotify Menubar.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7482E34020926640003D4C01 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7482E34220926641003D4C01 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -139,6 +141,14 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		74081ABA2098CB6D000688A3 /* Configuration */ = {
+			isa = PBXGroup;
+			children = (
+				74081ABB2098CB7C000688A3 /* ConfigurationService.swift */,
+			);
+			path = Configuration;
+			sourceTree = "<group>";
+		};
 		743F6353209441E400D720C3 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
@@ -186,7 +196,6 @@
 			children = (
 				7442CD9920938E3200A761D2 /* NSMenuItem */,
 				74AEF6802095C91800833E7D /* PlayPauseButton */,
-				74663D3F209341D40006F53C /* TrackInfo */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -196,21 +205,12 @@
 			children = (
 				74663D3D209341BF0006F53C /* Components */,
 				743F6353209441E400D720C3 /* Extensions */,
-				74AEF67C2095C86400833E7D /* Libs */,
 				744F8B1A2093607C007AF645 /* Models */,
 				7482E3752092692D003D4C01 /* Services */,
 				7482E36C20926741003D4C01 /* Utils */,
 				7482E36F209268A7003D4C01 /* Views */,
 			);
 			path = Classes;
-			sourceTree = "<group>";
-		};
-		74663D3F209341D40006F53C /* TrackInfo */ = {
-			isa = PBXGroup;
-			children = (
-				74663D40209341F30006F53C /* TrackInfoView.swift */,
-			);
-			path = TrackInfo;
 			sourceTree = "<group>";
 		};
 		7482E33420926640003D4C01 = {
@@ -299,6 +299,7 @@
 		7482E3752092692D003D4C01 /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				74081ABA2098CB6D000688A3 /* Configuration */,
 				744F8B1720935BA9007AF645 /* Image */,
 				7482E37620926934003D4C01 /* Spotify */,
 			);
@@ -319,6 +320,7 @@
 			children = (
 				7482E37A20926B28003D4C01 /* PreferencesViewController.swift */,
 				7482E37B20926B28003D4C01 /* PreferencesViewController.xib */,
+				74081AB82098CA46000688A3 /* PreferencesViewModel.swift */,
 			);
 			path = Preferences;
 			sourceTree = "<group>";
@@ -330,13 +332,6 @@
 				7482E38020926C28003D4C01 /* AboutViewController.xib */,
 			);
 			path = About;
-			sourceTree = "<group>";
-		};
-		74AEF67C2095C86400833E7D /* Libs */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Libs;
 			sourceTree = "<group>";
 		};
 		74AEF6802095C91800833E7D /* PlayPauseButton */ = {
@@ -590,9 +585,9 @@
 				74AEF6822095C92E00833E7D /* PlayPauseButtonView.swift in Sources */,
 				7442CD9B20938E5200A761D2 /* ATMenuItem.swift in Sources */,
 				743F6355209441F300D720C3 /* NSImageExtension.swift in Sources */,
-				74663D41209341F30006F53C /* TrackInfoView.swift in Sources */,
 				744F8B1920935BC8007AF645 /* ImageService.swift in Sources */,
 				7482E373209268CE003D4C01 /* PopoverViewController.swift in Sources */,
+				74081ABC2098CB7C000688A3 /* ConfigurationService.swift in Sources */,
 				7482E36E20926751003D4C01 /* EventMonitor.swift in Sources */,
 				7442CD9820938C7F00A761D2 /* MainController.swift in Sources */,
 				7482E38120926C28003D4C01 /* AboutViewController.swift in Sources */,
@@ -601,6 +596,7 @@
 				7482E34120926640003D4C01 /* AppDelegate.swift in Sources */,
 				744F8B1D20936094007AF645 /* MusicPlayerAction.swift in Sources */,
 				7482E37C20926B28003D4C01 /* PreferencesViewController.swift in Sources */,
+				74081AB92098CA46000688A3 /* PreferencesViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -770,7 +766,10 @@
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = A6GX9BV832;
 				INFOPLIST_FILE = "Spotify Menubar/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.aureltyson.Spotify-Menubar";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -787,7 +786,10 @@
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = A6GX9BV832;
 				INFOPLIST_FILE = "Spotify Menubar/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.aureltyson.Spotify-Menubar";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -804,7 +806,11 @@
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = A6GX9BV832;
 				INFOPLIST_FILE = "Spotify MenubarTests/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.aureltyson.Spotify-MenubarTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -822,7 +828,11 @@
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = A6GX9BV832;
 				INFOPLIST_FILE = "Spotify MenubarTests/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.aureltyson.Spotify-MenubarTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -839,7 +849,11 @@
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = A6GX9BV832;
 				INFOPLIST_FILE = "Spotify MenubarUITests/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.aureltyson.Spotify-MenubarUITests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -856,7 +870,11 @@
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = A6GX9BV832;
 				INFOPLIST_FILE = "Spotify MenubarUITests/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.aureltyson.Spotify-MenubarUITests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;

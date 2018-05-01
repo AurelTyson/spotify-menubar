@@ -7,23 +7,66 @@
 //
 
 import Cocoa
+import RxCocoa
+import RxSwift
 
-class PreferencesViewController: NSViewController {
+public final class PreferencesViewController: NSViewController {
     
-    var prefs = UserDefaults.standard
+    // MARK: Text
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        // Do view setup here.
+    fileprivate enum Text {
+        
+        fileprivate static let title = ""
+        
     }
     
-    func checkOrDefault<ReturnType>(key: String, def: Any?) -> ReturnType {
-        if let val = prefs.value(forKey: key) {
-            return val as! ReturnType
-        }
-        else {
-            return def as! ReturnType
-        }
+    // MARK: Constants
+    
+    // MARK: Graphic attributes
+    
+    @IBOutlet private weak var checkIsNotificationActivated: NSButton!
+    
+    // MARK: Attributes
+    
+    private var viewModel: PreferencesViewModelType!
+    
+    private let disposeBag = DisposeBag()
+    
+    // MARK: Init
+    
+    public init(configurationService: ConfigurationServiceProtocol = ConfigurationService.shared) {
+        super.init(nibName: NSNib.Name(rawValue: "PreferencesViewController"), bundle: nil)
+        
+        // ViewModel
+        self.viewModel = PreferencesViewModel(configurationService: configurationService)
+        
+    }
+    
+    required public init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
+    }
+    
+    // MARK: View lifecycle
+    
+    override public func viewDidLoad() {
+        super.viewDidLoad()
+        
+        // Is notification activated
+        self.checkIsNotificationActivated.title = "Display notification when track is changing"
+        self.checkIsNotificationActivated.rx.tap.subscribe(onNext: { [weak self] () in
+            
+            // Updating configuration
+            let lIsChecked = self?.checkIsNotificationActivated.state == .on
+            self?.viewModel.setNotificationActivated(lIsChecked)
+            
+        }).disposed(by: self.disposeBag)
+        self.viewModel.isNotificationActivated.subscribe(onNext: { [weak self] (isActivated: Bool) in
+            
+            // Updating check
+            self?.checkIsNotificationActivated.state = isActivated ? .on : .off
+            
+        }).disposed(by: self.disposeBag)
+        
     }
     
 }

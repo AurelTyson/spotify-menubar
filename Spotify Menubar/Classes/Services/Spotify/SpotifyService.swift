@@ -15,6 +15,7 @@ import ScriptingBridge
 public protocol SpotifyServiceProtocol {
     
     var currentTrack: PublishRelay<SpotifyTrack> { get }
+    var playbackStateChanged: BehaviorRelay<SpotifyTrack?> { get }
     
     func stopTimer()
     func didFire(playerAction: MusicPlayerAction)
@@ -32,6 +33,7 @@ public final class SpotifyService: SpotifyServiceProtocol {
     // MARK: Attributes
     
     public let currentTrack = PublishRelay<SpotifyTrack>()
+    public let playbackStateChanged = BehaviorRelay<SpotifyTrack?>(value: nil)
     
     private weak var timer: Timer!
     
@@ -52,9 +54,27 @@ public final class SpotifyService: SpotifyServiceProtocol {
         // Start timer
         self.timer.fire()
         
+        // Observing Spotify notifications
+        DistributedNotificationCenter.default().addObserver(self,
+                                                            selector: #selector(spotifyPlaybackStateChanged),
+                                                            name: NSNotification.Name(rawValue: "com.spotify.client.PlaybackStateChanged"),
+                                                            object: nil)
+        
+        // Current playing track
+        if self.spotifyController.isPlaying() {
+            self.playbackStateChanged.accept(self.spotifyController.currentTrack())
+        }
+        
     }
     
     // MARK: Methods
+    
+    @objc private func spotifyPlaybackStateChanged() {
+        
+        // Event
+        self.playbackStateChanged.accept(self.spotifyController.currentTrack())
+        
+    }
     
     public func stopTimer() {
         self.timer.invalidate()

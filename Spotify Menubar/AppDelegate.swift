@@ -13,12 +13,16 @@ public final class AppDelegate: NSObject, NSApplicationDelegate {
     
     // MARK: Attributes
     
-    private let mainController = MainController(spotifyService: SpotifyService.shared)
+    private let mainController = MainController(configurationService: ConfigurationService.shared,
+                                                spotifyService: SpotifyService.shared)
     
     // MARK: Application delegate
     
     public func applicationDidFinishLaunching(_ aNotification: Notification) {
         // Insert code here to initialize your application
+        
+        // Notification center delegate
+        NSUserNotificationCenter.default.delegate = self
         
         // Loading app
         self.mainController.load()
@@ -31,3 +35,10 @@ public final class AppDelegate: NSObject, NSApplicationDelegate {
     
 }
 
+extension AppDelegate: NSUserNotificationCenterDelegate {
+    
+    public func userNotificationCenter(_ center: NSUserNotificationCenter, shouldPresent notification: NSUserNotification) -> Bool {
+        return true
+    }
+    
+}
