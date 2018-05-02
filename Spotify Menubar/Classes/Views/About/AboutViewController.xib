@@ -1,19 +1,99 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="11134" systemVersion="15F34" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="14109" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="11134"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="14109"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
-        <customObject id="-2" userLabel="File's Owner" customClass="AboutViewController" customModuleProvider="target">
+        <customObject id="-2" userLabel="File's Owner" customClass="AboutViewController" customModule="Spotify_Menubar" customModuleProvider="target">
             <connections>
+                <outlet property="labelAppName" destination="sst-M0-gdi" id="Kiq-Mb-wcj"/>
+                <outlet property="labelGithub" destination="Oll-LW-ihn" id="7uO-Rz-oUQ"/>
+                <outlet property="labelInfos" destination="zpc-7E-OJk" id="2VW-af-EGM"/>
+                <outlet property="labelVersion" destination="C25-Ib-UXO" id="BSZ-cj-DAH"/>
                 <outlet property="view" destination="Hz6-mo-xeY" id="0bl-1N-x8E"/>
             </connections>
         </customObject>
         <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
         <customObject id="-3" userLabel="Application" customClass="NSObject"/>
         <customView id="Hz6-mo-xeY">
-            <rect key="frame" x="0.0" y="0.0" width="480" height="272"/>
+            <rect key="frame" x="0.0" y="0.0" width="369" height="136"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+            <subviews>
+                <customView translatesAutoresizingMaskIntoConstraints="NO" id="T8Z-YD-22d">
+                    <rect key="frame" x="8" y="8" width="353" height="120"/>
+                    <subviews>
+                        <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="0Uh-iG-LMI">
+                            <rect key="frame" x="0.0" y="0.0" width="120" height="120"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="120" id="DHO-Dh-Vm0"/>
+                                <constraint firstAttribute="height" constant="120" id="sWS-hz-meD"/>
+                            </constraints>
+                            <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="logo_app" id="Tf4-yf-Obx"/>
+                        </imageView>
+                        <textField horizontalHuggingPriority="251" verticalHuggingPriority="751" translatesAutoresizingMaskIntoConstraints="NO" id="sst-M0-gdi">
+                            <rect key="frame" x="128" y="93" width="217" height="27"/>
+                            <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="App name" id="xb7-ql-msh">
+                                <font key="font" size="16" name="AvenirNext-Medium"/>
+                                <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                            </textFieldCell>
+                        </textField>
+                        <textField horizontalHuggingPriority="251" verticalHuggingPriority="751" translatesAutoresizingMaskIntoConstraints="NO" id="C25-Ib-UXO">
+                            <rect key="frame" x="126" y="0.0" width="219" height="19"/>
+                            <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="right" title="Version" id="Opc-YC-kQ9">
+                                <font key="font" size="11" name="AvenirNext-Regular"/>
+                                <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                            </textFieldCell>
+                        </textField>
+                        <textField horizontalHuggingPriority="251" verticalHuggingPriority="752" translatesAutoresizingMaskIntoConstraints="NO" id="zpc-7E-OJk">
+                            <rect key="frame" x="128" y="70" width="217" height="23"/>
+                            <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="Created by Aurel Tyson" id="zly-Sh-RfS">
+                                <font key="font" size="13" name="AvenirNext-Regular"/>
+                                <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                            </textFieldCell>
+                        </textField>
+                        <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Oll-LW-ihn">
+                            <rect key="frame" x="128" y="19" width="217" height="51"/>
+                            <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" refusesFirstResponder="YES" sendsActionOnEndEditing="YES" alignment="center" title="Github" allowsEditingTextAttributes="YES" id="JFY-Kq-ONx">
+                                <font key="font" size="13" name="AvenirNext-Regular"/>
+                                <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                            </textFieldCell>
+                        </textField>
+                    </subviews>
+                    <constraints>
+                        <constraint firstItem="zpc-7E-OJk" firstAttribute="top" secondItem="sst-M0-gdi" secondAttribute="bottom" id="531-aI-IBi"/>
+                        <constraint firstItem="Oll-LW-ihn" firstAttribute="top" secondItem="zpc-7E-OJk" secondAttribute="bottom" id="5HQ-Wt-B8z"/>
+                        <constraint firstAttribute="trailing" secondItem="zpc-7E-OJk" secondAttribute="trailing" constant="10" id="7UF-oH-bhf"/>
+                        <constraint firstAttribute="trailing" secondItem="C25-Ib-UXO" secondAttribute="trailing" constant="10" id="GoV-UH-9z1"/>
+                        <constraint firstItem="C25-Ib-UXO" firstAttribute="leading" secondItem="0Uh-iG-LMI" secondAttribute="trailing" constant="8" id="HuI-uU-ety"/>
+                        <constraint firstItem="0Uh-iG-LMI" firstAttribute="top" secondItem="T8Z-YD-22d" secondAttribute="top" id="LeG-uJ-V5K"/>
+                        <constraint firstItem="0Uh-iG-LMI" firstAttribute="centerY" secondItem="T8Z-YD-22d" secondAttribute="centerY" id="PhA-50-vfZ"/>
+                        <constraint firstAttribute="trailing" secondItem="Oll-LW-ihn" secondAttribute="trailing" constant="10" id="WG2-K8-zrK"/>
+                        <constraint firstItem="Oll-LW-ihn" firstAttribute="leading" secondItem="0Uh-iG-LMI" secondAttribute="trailing" constant="10" id="i72-cU-Gt1"/>
+                        <constraint firstItem="sst-M0-gdi" firstAttribute="leading" secondItem="0Uh-iG-LMI" secondAttribute="trailing" constant="10" id="o7V-Kl-apM"/>
+                        <constraint firstAttribute="trailing" secondItem="sst-M0-gdi" secondAttribute="trailing" constant="10" id="oRE-rg-4Be"/>
+                        <constraint firstItem="C25-Ib-UXO" firstAttribute="top" secondItem="Oll-LW-ihn" secondAttribute="bottom" id="ouD-PH-TqD"/>
+                        <constraint firstItem="0Uh-iG-LMI" firstAttribute="leading" secondItem="T8Z-YD-22d" secondAttribute="leading" id="ovk-dV-9pu"/>
+                        <constraint firstItem="C25-Ib-UXO" firstAttribute="bottom" secondItem="0Uh-iG-LMI" secondAttribute="bottom" id="prU-Rp-8RD"/>
+                        <constraint firstItem="zpc-7E-OJk" firstAttribute="leading" secondItem="0Uh-iG-LMI" secondAttribute="trailing" constant="10" id="wJf-Hh-Jha"/>
+                        <constraint firstItem="sst-M0-gdi" firstAttribute="top" secondItem="T8Z-YD-22d" secondAttribute="top" id="zYn-6m-jpA"/>
+                    </constraints>
+                </customView>
+            </subviews>
+            <constraints>
+                <constraint firstItem="T8Z-YD-22d" firstAttribute="top" secondItem="Hz6-mo-xeY" secondAttribute="top" constant="8" id="CmL-kk-dgH"/>
+                <constraint firstItem="T8Z-YD-22d" firstAttribute="leading" secondItem="Hz6-mo-xeY" secondAttribute="leading" constant="8" id="VhN-wm-zm8"/>
+                <constraint firstAttribute="trailing" secondItem="T8Z-YD-22d" secondAttribute="trailing" constant="8" id="YSJ-zK-3qo"/>
+                <constraint firstAttribute="bottom" secondItem="T8Z-YD-22d" secondAttribute="bottom" constant="8" id="rwV-m5-bRk"/>
+            </constraints>
+            <point key="canvasLocation" x="74.5" y="168"/>
         </customView>
     </objects>
+    <resources>
+        <image name="logo_app" width="256" height="256"/>
+    </resources>
 </document>

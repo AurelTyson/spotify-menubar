@@ -278,10 +278,10 @@
 		7482E36F209268A7003D4C01 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				7442CD9620938C6700A761D2 /* Main */,
 				7482E37E20926C1C003D4C01 /* About */,
-				7482E37920926B14003D4C01 /* Preferences */,
+				7442CD9620938C6700A761D2 /* Main */,
 				7482E370209268B6003D4C01 /* Popover */,
+				7482E37920926B14003D4C01 /* Preferences */,
 			);
 			path = Views;
 			sourceTree = "<group>";
